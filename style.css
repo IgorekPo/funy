@@ -1,0 +1,251 @@
+@import url('style/reset.css');
+
+
+.header {
+}
+.header__conteiner {
+}
+.header__body {
+}
+.main__img {
+   display: flex;
+   max-width: 250px;
+   height: 150px;
+   margin: 0 auto;
+}
+
+.main__img a img{
+   height: 150px;
+   transition: all .5s;
+}
+.main__img:hover a img{
+   scale: 1.2;
+   filter: drop-shadow(0 0 5px #000);
+}
+
+
+.links {
+   margin-top: 60px;
+}
+.links__conteiner {
+}
+.links__body {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: space-around;
+}
+.link {
+   max-width: 180px;
+   transition: all .5s;
+}
+
+.link:hover {
+   scale: 1.2;
+}
+.main{
+   position: relative;
+}
+.main > img{
+   max-width: 600px;
+   position: absolute;
+   animation: car 2s forwards;
+   left: 200%;
+   
+}
+
+@keyframes car {
+   0%,10% {
+
+      left: 200%;
+      top: 60%;
+      transform: translate(-200% , -60%) rotate(-2deg);
+   }
+   70%, 97%{
+      left: 50%;
+      top: 60%;
+      transform: translate(-50% , -60%) rotate(-1deg);
+   }
+   97.1%, 99.8%{
+      left: 50%;
+      top: 60%;
+      transform: translate(-50% , -60%) rotate(-0.5deg);
+   }
+
+   99.9%,100%{
+      left: 50%;
+      top: 60%;
+      transform: translate(-50% , -60%) rotate(0deg);
+
+   }
+}
+@media(max-width: 872px){
+   .main > img{
+      max-width: 400px;
+   }
+}
+@media(max-width: 442px){
+   .main > img{
+      max-width: 280px;
+   }
+}
+
+.fun1, .fun2{
+   position: absolute;
+   max-width:80px;
+   animation: fun 2s forwards;
+}
+.fun1{
+   left: 25%;
+   transform: translate(-25%);
+   animation: fun1 2s forwards;
+
+}
+.fun2{
+   left: 65%;
+   transform: translate(-65%);
+   animation: fun2 3s forwards;
+
+}
+
+@keyframes fun1 {
+   from{
+      top: 100vh;
+   }
+   to{
+      top: 30vh;
+   }
+}
+@keyframes fun2 {
+   from{
+      top: 100vh;
+   }
+   to{
+      top: 1vh;
+   }
+}
+@media(max-width: 976px){
+   .fun1, .fun2{
+      max-width:60px;
+   }
+}
+
+@media(max-width: 532px){
+   .fun1, .fun2{
+      max-width:40px;
+   }
+}
+/* ==============CARDS=================== */
+
+
+.cards {
+   margin: 60px 0;
+   
+}
+.cards__conteiner {
+}
+.cards__body {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   row-gap: 60px;
+   column-gap: 30px;
+}
+.card {
+   flex: 1 0 23%;
+}
+.card__car {
+   border: 2px solid black;
+   cursor: pointer;
+   transition: all .5s;
+   padding: 10px 0;
+   position: relative;
+}
+.card__car img{
+   position: absolute;
+   top: 50%;
+   left: 2%;
+   width: 30px;
+   height: 30px;
+   transform: translate(-2% , -50%);
+}
+.card__car:hover {
+   background-color: rgb(255, 180, 83);
+}
+.card__car span{
+   color: red;
+}
+.card__date {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 5px 0px 5px 0px;
+   gap: 10px;
+}
+.card__date-on {
+   border: 2px solid black;
+   padding: 8px;
+}
+.card__date-came {
+   border: 2px solid black;
+   padding: 8px;
+
+}
+.card__price {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 2px solid black;
+   padding: 8px;
+   gap: 10px;
+
+}
+
+.card__item-articl li{
+   margin-bottom: 15px;
+}
+.card__item-quantity li{
+   margin-bottom: 15px;
+}
+@media(max-width: 768px){
+   .cards__body{
+      row-gap: 30px;
+      column-gap: 15px;
+   }
+}
+
+@media(max-width: 540px){
+   .link{
+      max-width: 100px
+   }
+   .main__img{
+      max-width: 180px;
+   }
+}
+@media(max-width: 424px){
+   .link{
+      max-width: 70px
+   }
+}
+.card__items{
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: space-between;
+   border: 2px solid black;
+   margin-top: 20px;
+   background-color: antiquewhite;
+   gap: 10px;
+   max-height: 0;
+   overflow: hidden;
+   transition: all 0.5s;
+   padding: 0 10px;
+
+}
+
+.card__car.active ~ .card__items{
+   max-height: 100%;
+   padding: 10px;
+}
+
+/* ====================================== */
